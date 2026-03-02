@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #1b4332;
+    --secondary-color: #40916c;
+    --accent-color: #d8f3dc;
+    --dark-color: #081c15;
+    --light-color: #ffffff;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--accent-color);
+    color: var(--dark-color);
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+/* =========================
+   GRID PRINCIPAL
+========================= */
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+/* =========================
+   SECCIÓN LOOKBOOK
+========================= */
+section {
+    grid-column: 1 / 7;
+    display: contents;
+}
+
+article {
+    background: var(--light-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.03);
+}
+
+article h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+article img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Distribución artística */
+.art1 {
+    grid-column: 1 / 4;
+}
+
+.art2 {
+    grid-column: 3 / 7;
+    margin-top: -60px; /* Traslape */
+}
+
+.art3 {
+    grid-column: 2 / 6;
+}
+
+/* =========================
+   ASIDE
+========================= */
+aside {
+    grid-column: 5 / 7;
+    background: var(--secondary-color);
+    color: var(--light-color);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    margin-top: 40px;
+}
